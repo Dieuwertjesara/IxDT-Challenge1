@@ -3,6 +3,21 @@ body {
     background: lightgrey;
     width: 100vw;
 }
+#box1 > img {
+    max-height: 26vh;
+    padding: 2vh;
+    right: 0;
+    position: absolute;
+    top: 0;
+}
+
+#box2 > img {
+    max-height: 26vh;
+    padding: 2vh;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
 
 h1 {
     position: relative;
@@ -21,24 +36,27 @@ h1 {
     flex-direction: column;
 }
 
+
+
 #box1 {
     position: relative;
     background-color: white;
     width: 80vw;
     margin: 5%;
-    height: 20vh;
+    height: 40vh;
     box-shadow: 4px 4px 5px grey ;
 }
 #box1 > p {
     text-align: left;
     margin: 10px;
+    position: absolute;
 }
 #box2 {
     position: relative;
     background-color: white;
     width: 80vw;
     margin: 5%;
-    height: 20vh;
+    height: 40vh;
     box-shadow: 4px 4px 5px grey ;
 }
 #box2 > p {
