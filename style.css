@@ -10,9 +10,10 @@ h1 {
     text-align: center;
     z-index: 5;
     background-color: lightgray;
-    width: 80vw;
+    width: 100vw;
     height: 10vh;
     padding-bottom: 5px;
+    font-size: 5vmax;
 }
 
 #flex-container {
