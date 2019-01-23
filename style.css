@@ -1,8 +1,15 @@
 /* ======== Base Styles (phone) ======== */
-body {
-    background: lightgrey;
-    width: 100vw;
+nav {
+    width: 100%;
+    height: 8vh;
+    background: green;
 }
+
+body {
+    font-family: Helvetica, sans-serif;
+}
+
+
 #box1 > img {
     max-height: 26vh;
     padding: 2vh;
@@ -19,13 +26,16 @@ body {
     top: 0;
 }
 
+a {
+    color: green;
+}
+
 h1 {
     position: relative;
     color: green;
     text-align: center;
     z-index: 5;
     background-color: lightgray;
-    width: 100vw;
     height: 15vh;
     padding-bottom: 5px;
     font-size: 5vmax;
@@ -36,35 +46,38 @@ h1 {
     flex-direction: column;
 }
 
-
-
 #box1 {
     position: relative;
     background-color: white;
-    width: 80vw;
+    width: 90%;
     margin: 5%;
     height: 40vh;
-    box-shadow: 4px 4px 5px grey ;
+    box-shadow: 4px 4px 15px grey;
 }
+
 #box1 > p {
     text-align: left;
     margin: 10px;
     position: absolute;
     font-size: 2vmax;
+    clear: left;
 }
+
 #box2 {
     position: relative;
     background-color: white;
-    width: 80vw;
+    width: 90%;
     margin: 5%;
     height: 40vh;
-    box-shadow: 4px 4px 5px grey ;
+    box-shadow: 4px 4px 15px grey;
 }
+
 #box2 > p {
     text-align: right;
     margin: 10px;
     font-size: 2vmax;
 }
+
 #timeline::after {
     content: '';
     position: fixed;
@@ -77,34 +90,238 @@ h1 {
     z-index: -1;
 }
 
+/* Challenge 2*/
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'nav logo logo logo logo'
+        'foto foto foto foto foto'
+        'tekst tekst tekst tekst open'
+        'beste social social social social'
+        'footer footer footer footer footer'
+    ;
+    grid-column-gap: 5%;
+    margin: 15px;
+    
+}
+#check {
+    display: none;
+    background: grey;
+    position: fixed;
+}
+
+.menu-btn:checked ~ #check {
+    display: block;
+    max-height: 130px;
+}
+.menu-btn{
+    opacity: 0;
+    height: 5%;
+    width: 5%;
+    z-index: 10;
+    position: absolute;
+}
+
+.menu-btn:checked ~ .knop{
+    background-color: lightgoldenrodyellow;
+}
+.knop {
+    width: 25%;;
+}
+
+.logo {
+    grid-area: logo;
+    width: inherit;
+    grid-column-end: 6;
+    grid-column-start: 1;
+}
+
+.icon {
+    width: 8%;
+    margin: 3%;
+}
+
+.nav {
+    grid-area: nav;
+}
+
+.foto {
+    grid-area: foto;
+    width: inherit;
+}
+
+.tekst {
+    grid-area: tekst;
+    grid-column: 1/4;
+}
+
+p {
+    margin-top: 0px;
+}
+
+.social {
+    grid-area: social;
+    grid-column-start: 3;
+}
+
+.open {
+    grid-area: open;
+    text-align: right;
+    grid-row: 3/4;
+    grid-column: 4/6;
+}
+
+.footer {
+    grid-area: footer;
+    text-align: center;
+}
+
+.beste {
+    grid-area: beste;
+    width: inherit;
+    grid-column-end: 3;
+}
+
+.item {
+    width: 100%;
+    padding: 10px;
+}
+
+/* hamburger menu */
+.hamburgerknop {
+    width: 40px;
+}
+
+#hamburgermenu {
+    width: 15%;
+    left: 0px;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+}
+
+li.test {
+    display: block;
+    right: 0;
+    position: absolute;
+}
+
+.test-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 20;
+}
+
+.test-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.test-content a:hover {
+    background-color: #f1f1f1
+}
+
+.test:hover .test-content {
+    display: block;
+}
+
+
+#nav {
+    display: none;
+    width: 100%;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    padding-left: 0%;
+}
+
+li {
+    float: left;
+    text-align: center;
+}
+
+li a,
+.dropbtn {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover,
+.dropdown:hover .dropbtn {
+    background-color: gray;
+}
+
+
 /*tablet*/
 
 @media only screen and (min-width: 600px) {
-    h1 {
-        color: yellow;
+    nav {
+        background: yellow;
     }
-
 }
 
 /*laptop*/
 
 @media only screen and (min-width : 800px) {
-    h1 {
-        color: orange;
-    }
+
+
     #box2 {
 
-    align-self: flex-end;
-    box-shadow: -4px 4px 5px grey ;
+        align-self: flex-end;
+        box-shadow: -4px 4px 15px grey;
+        width: 60%;
     }
+
+    #box1 {
+        width: 60%;
+    }
+
+    #hamburgermenu {
+        display: none;
+
+    }
+
+    nav {
+
+        background: orange;
+    }
+
+    #nav {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+    }
+
 }
 
 /*desktop*/
 
 @media only screen and (min-width : 1000px) {
-    h1 {
-        color: red;
+
+
+    #hamburgermenu {
+        display: none;
+
     }
-    
+
+    nav {
+        background: red;
+    }
 
 }
