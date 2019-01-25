@@ -5,24 +5,20 @@ body {
     background-color: #f4f4f4;
 }
 
-nav {
-    height: 60px;
-    background: green;
-}
 #box1 > img {
-    max-height: 26vh;
+    height: 40%;
     padding: 2vh;
     right: 0;
     position: absolute;
-    top: 0;
+    top: 20%;
 }
 
 #box2 > img {
-    max-height: 26vh;
+     height: 40%;
     padding: 2vh;
     left: 0;
     position: absolute;
-    top: 0;
+    top: 20%;
 }
 
 h1 {
@@ -48,13 +44,24 @@ h1 {
     height: 40vh;
     box-shadow: 4px 4px 15px grey;
 }
+#title{
+    position: relative;
+    font-size: 150%;
+    height: 5vh;
+}
+
+#text {
+    
+}
+
 
 #box1 > p {
     text-align: left;
     margin: 10px;
     position: absolute;
     font-size: 2vmax;
-    clear: left;
+    top:25%;
+    width: 50%;
 }
 
 #box2 {
@@ -84,84 +91,11 @@ h1 {
     z-index: -1;
 }
 
-/* Challenge 2*/
-
-.grid-container {
-    display: grid;
-    grid-template-areas:
-        'nav logo logo logo logo'
-        'foto foto foto foto foto'
-        'tekst tekst tekst tekst open'
-        'beste social social social social'
-        'footer footer footer footer footer';
-}
-
-
-.logo {
-    grid-area: logo;
-    width: inherit;
-    grid-column-end: 6;
-    grid-column-start: 1;
-}
-
-.icon {
-    width: 8%;
-    margin: 3%;
-}
-
-.nav {
-    grid-area: nav;
-}
-
-.foto {
-    grid-area: foto;
-    width: inherit;
-}
-
-.tekst {
-    grid-area: tekst;
-    grid-column: 1/4;
-}
-
-p {
-    margin-top: 0px;
-}
-
-.social {
-    grid-area: social;
-    grid-column-start: 3;
-}
-
-.open {
-    grid-area: open;
-    text-align: right;
-    grid-row: 3/4;
-    grid-column: 4/6;
-}
-
-.footer {
-    grid-area: footer;
-    text-align: center;
-}
-
-.beste {
-    grid-area: beste;
-    width: inherit;
-    grid-column-end: 3;
-}
-
-.item {
-    width: 100%;
-    border: solid;
-}
 
 /*tablet*/
 
 @media only screen and (min-width: 600px) {
-    nav {
-        background: yellow;
-    }
-
+    
 }
 
 /*laptop*/
@@ -180,28 +114,6 @@ p {
         width: 60%;
     }
 
-    nav {
-        height: 60px;
-        background: orange;
-    }
-
-    .header li {
-        float: left;
-    }
-
-    .header li a {
-        padding: 20px 30px;
-    }
-
-    .header .menu {
-        clear: none;
-        float: right;
-        max-height: none;
-    }
-
-    .header .menu-icon {
-        display: none;
-    }
 
 }
 
@@ -210,9 +122,5 @@ p {
 @media only screen and (min-width : 1000px) {
 
 
-
-    nav {
-        background: red;
-    }
 
 }
